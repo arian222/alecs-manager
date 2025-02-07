@@ -22,7 +22,7 @@ chmod +x alecs_install.sh
 
 După instalare, folosiți comanda:
 ```bash
-alecs
+alecs sau menu
 ```
 
 ## Dezvoltator
