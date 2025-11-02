@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="ro">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>eSIM Europa ? Internet rapid ?i stabil</title>
+    <meta name="description" content="eSIM Europa ? Internet rapid ?i stabil. Activare ?n c?teva minute, f?r? contracte.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gray-900: #0f172a;
+            --gray-800: #1e293b;
+            --gray-100: #e2e8f0;
+            --gray-300: #cbd5f5;
+            --green-400: #34d399;
+            --green-500: #10b981;
+            --green-600: #059669;
+            --green-50: #ecfdf5;
+            --orange-400: #fb923c;
+            --orange-500: #f97316;
+            --yellow-400: #facc15;
+            --white: #ffffff;
+            --radius-lg: 18px;
+            --shadow-soft: 0 25px 60px rgba(15, 23, 42, 0.25);
+            --shadow-card: 0 18px 36px rgba(15, 23, 42, 0.18);
+        }
+
+        * { box-sizing: border-box; }
+        html, body { height: 100%; }
+
+        body {
+            margin: 0;
+            font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            background: radial-gradient(1400px 800px at 80% -10%, rgba(79, 70, 229, 0.16), transparent 60%), radial-gradient(1000px 600px at 20% 10%, rgba(16, 185, 129, 0.18), transparent 65%), var(--gray-900);
+            color: var(--gray-100);
+            line-height: 1.6;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        .page {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 32px 20px 64px;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            background: conic-gradient(from 120deg, var(--green-500), var(--green-400), var(--green-500));
+            display: grid;
+            place-items: center;
+            color: var(--gray-900);
+            font-weight: 700;
+            letter-spacing: 0.4px;
+            filter: drop-shadow(0 12px 28px rgba(16, 185, 129, 0.35));
+        }
+
+        nav {
+            display: flex;
+            gap: 18px;
+            font-size: 15px;
+            color: rgba(236, 253, 245, 0.72);
+        }
+
+        .nav-link {
+            padding: 8px 14px;
+            border-radius: 999px;
+            transition: all 0.25s ease;
+        }
+
+        .nav-link:hover {
+            background: rgba(236, 253, 245, 0.08);
+            color: var(--white);
+        }
+
+        .hero {
+            margin-top: 60px;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 32px;
+            align-items: center;
+        }
+
+        @media (max-width: 960px) {
+            .hero { grid-template-columns: 1fr; margin-top: 48px; }
+            nav { display: none; }
+        }
+
+        h1 {
+            margin: 0 0 18px;
+            font-size: clamp(32px, 5vw, 48px);
+            line-height: 1.1;
+        }
+
+        .hero-highlight {
+            display: inline-block;
+            background: linear-gradient(120deg, rgba(52, 211, 153, 0.25), rgba(59, 130, 246, 0.12));
+            border-radius: 999px;
+            padding: 6px 14px;
+            font-size: 14px;
+            font-weight: 600;
+            color: rgba(236, 253, 245, 0.9);
+            border: 1px solid rgba(52, 211, 153, 0.35);
+            margin-bottom: 16px;
+        }
+
+        .hero-lead {
+            font-size: 18px;
+            color: rgba(226, 232, 240, 0.8);
+            margin-bottom: 28px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary,
+        .btn-ghost {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border-radius: 12px;
+            font-weight: 600;
+            padding: 14px 20px;
+            transition: transform 0.18s ease, box-shadow 0.2s ease, background 0.25s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--green-500), var(--green-600));
+            color: var(--white);
+            box-shadow: 0 15px 40px rgba(16, 185, 129, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 18px 48px rgba(16, 185, 129, 0.46);
+        }
+
+        .btn-ghost {
+            color: rgba(236, 253, 245, 0.7);
+            border: 1px solid rgba(236, 253, 245, 0.2);
+            background: rgba(15, 23, 42, 0.35);
+        }
+
+        .btn-ghost:hover {
+            border-color: rgba(236, 253, 245, 0.4);
+            color: var(--white);
+        }
+
+        .hero-card {
+            background: linear-gradient(165deg, rgba(15, 23, 42, 0.92), rgba(30, 41, 59, 0.88));
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            border: 1px solid rgba(226, 232, 240, 0.08);
+            box-shadow: var(--shadow-card);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-card::before {
+            content: "";
+            position: absolute;
+            inset: -40% -50% auto;
+            height: 340px;
+            background: conic-gradient(from 180deg, rgba(52, 211, 153, 0.12), rgba(129, 140, 248, 0.08), transparent 65%);
+            filter: blur(50px);
+        }
+
+        .plan-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(236, 253, 245, 0.08);
+            border-radius: 999px;
+            padding: 6px 12px;
+            font-size: 13px;
+            color: rgba(236, 253, 245, 0.75);
+            margin-bottom: 16px;
+            border: 1px solid rgba(52, 211, 153, 0.2);
+        }
+
+        .plan-price {
+            display: flex;
+            gap: 12px;
+            align-items: baseline;
+            margin-bottom: 16px;
+        }
+
+        .plan-price h2 {
+            margin: 0;
+            font-size: 42px;
+            color: var(--green-400);
+            letter-spacing: -0.5px;
+        }
+
+        .plan-price span {
+            font-size: 14px;
+            color: rgba(226, 232, 240, 0.65);
+        }
+
+        .plan-benefits {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: grid;
+            gap: 10px;
+            color: rgba(226, 232, 240, 0.82);
+        }
+
+        .plan-benefits li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 12px;
+            border-radius: 12px;
+            background: rgba(15, 23, 42, 0.4);
+            border: 1px solid rgba(148, 163, 184, 0.12);
+        }
+
+        .section {
+            margin-top: 96px;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 640px;
+            margin: 0 auto 48px;
+        }
+
+        .section-title {
+            font-size: clamp(26px, 4vw, 34px);
+            margin: 0 0 12px;
+            color: var(--white);
+        }
+
+        .section-subtitle {
+            margin: 0;
+            color: rgba(226, 232, 240, 0.72);
+            font-size: 16px;
+        }
+
+        .grid {
+            display: grid;
+            gap: 22px;
+        }
+
+        @media (min-width: 640px) {
+            .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+
+        @media (min-width: 900px) {
+            .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        }
+
+        .card {
+            border-radius: var(--radius-lg);
+            padding: 26px;
+            border: 1px solid rgba(226, 232, 240, 0.08);
+            background: linear-gradient(160deg, rgba(15, 23, 42, 0.82), rgba(30, 41, 59, 0.78));
+            transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(52, 211, 153, 0.35);
+            box-shadow: 0 20px 45px rgba(45, 212, 191, 0.15);
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(52, 211, 153, 0.18), rgba(59, 130, 246, 0.12));
+            display: grid;
+            place-items: center;
+            color: var(--green-400);
+            font-size: 22px;
+            margin-bottom: 18px;
+        }
+
+        .card h3 {
+            margin: 0 0 10px;
+            font-size: 18px;
+            color: var(--white);
+        }
+
+        .card p {
+            margin: 0;
+            color: rgba(226, 232, 240, 0.74);
+            font-size: 15px;
+        }
+
+        .steps {
+            counter-reset: step;
+            display: grid;
+            gap: 18px;
+        }
+
+        .step {
+            display: grid;
+            gap: 8px;
+            padding: 18px 20px 20px;
+            border-radius: 16px;
+            background: rgba(15, 23, 42, 0.68);
+            border: 1px solid rgba(226, 232, 240, 0.08);
+            position: relative;
+        }
+
+        .step::before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: rgba(52, 211, 153, 0.14);
+            color: var(--green-400);
+            font-weight: 600;
+        }
+
+        .step-title {
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--white);
+        }
+
+        .step-desc {
+            color: rgba(226, 232, 240, 0.72);
+            font-size: 14px;
+        }
+
+        .reviews {
+            display: grid;
+            gap: 22px;
+        }
+
+        @media (min-width: 768px) {
+            .reviews { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+
+        .review {
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            background: linear-gradient(160deg, rgba(30, 41, 59, 0.88), rgba(15, 23, 42, 0.78));
+            border: 1px solid rgba(226, 232, 240, 0.08);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 18px;
+        }
+
+        .review-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(59, 130, 246, 0.2));
+            display: grid;
+            place-items: center;
+            font-weight: 600;
+            color: rgba(236, 253, 245, 0.92);
+        }
+
+        .review-name {
+            font-weight: 600;
+            color: var(--white);
+        }
+
+        .review-location {
+            font-size: 13px;
+            color: rgba(226, 232, 240, 0.6);
+        }
+
+        .stars {
+            display: flex;
+            gap: 4px;
+            margin: 12px 0;
+            color: var(--yellow-400);
+        }
+
+        .review-text {
+            color: rgba(226, 232, 240, 0.78);
+            font-style: italic;
+            margin: 0 0 12px;
+        }
+
+        .faq {
+            display: grid;
+            gap: 18px;
+        }
+
+        details {
+            background: rgba(15, 23, 42, 0.65);
+            border-radius: 16px;
+            border: 1px solid rgba(226, 232, 240, 0.1);
+            padding: 18px 20px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+            list-style: none;
+        }
+
+        summary::-webkit-details-marker { display: none; }
+
+        details[open] {
+            border-color: rgba(52, 211, 153, 0.3);
+            box-shadow: 0 16px 36px rgba(45, 212, 191, 0.12);
+        }
+
+        details[open] summary {
+            color: var(--green-400);
+        }
+
+        details p {
+            margin: 14px 0 0;
+            color: rgba(226, 232, 240, 0.74);
+            font-size: 14px;
+        }
+
+        .cta-final {
+            margin-top: 84px;
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(5, 150, 105, 0.92), rgba(59, 130, 246, 0.85));
+            box-shadow: var(--shadow-soft);
+        }
+
+        .cta-final h2 {
+            margin: 0 0 12px;
+            font-size: clamp(28px, 5vw, 36px);
+            color: var(--white);
+        }
+
+        .cta-final p {
+            margin: 0 0 28px;
+            color: rgba(226, 232, 240, 0.88);
+        }
+
+        footer {
+            margin-top: 64px;
+            text-align: center;
+            color: rgba(226, 232, 240, 0.55);
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .hero-actions { flex-direction: column; align-items: stretch; }
+            .btn-primary, .btn-ghost { justify-content: center; width: 100%; }
+        }
+
+        .glow { position: relative; }
+
+        .glow::after {
+            content: "";
+            position: absolute;
+            inset: -30% -50%;
+            background: radial-gradient(circle, rgba(52, 211, 153, 0.25), transparent 65%);
+            filter: blur(60px);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <div class="brand">
+                <div class="logo">eSIM</div>
+                <div>
+                    <strong>eSIM Europa</strong><br>
+                    <span style="font-size: 13px; color: rgba(226,232,240,0.6)">Conexiune imediat? ?n 38+ ??ri</span>
+                </div>
+            </div>
+            <nav>
+                <a class="nav-link" href="#planuri">Planuri</a>
+                <a class="nav-link" href="#beneficii">Beneficii</a>
+                <a class="nav-link" href="#testimoniale">Testimoniale</a>
+                <a class="nav-link" href="#faq">FAQ</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div>
+                    <div class="hero-highlight">Activare ?n c?teva minute ? 5G/4G nelimitat</div>
+                    <h1>eSIM pentru Europa cu internet stabil ?i suport premium 24/7</h1>
+                    <p class="hero-lead">Configurare instant?, acoperire ?n majoritatea destina?iilor turistice ?i planuri flexibile f?r? contracte sau roaming scump.</p>
+                    <div class="hero-actions">
+                        <a class="btn-primary" href="#planuri">Vezi planurile disponibile</a>
+                        <a class="btn-ghost" href="#faq">Afl? cum func?ioneaz?</a>
+                    </div>
+                </div>
+                <aside class="hero-card glow" id="planuri">
+                    <span class="plan-tag">Plan recomandat</span>
+                    <div class="plan-price">
+                        <h2>24,90 ?</h2>
+                        <span>/ 15 zile ? 10 GB</span>
+                    </div>
+                    <ul class="plan-benefits">
+                        <li>?? Activare ?n maxim 2 minute dup? plat?</li>
+                        <li>?? Compatibil cu iPhone, Samsung, Google Pixel</li>
+                        <li>?? Trafic inclus ?n 38 de ??ri UE + UK</li>
+                        <li>?? Suport WhatsApp ?n limba rom?n? 24/7</li>
+                    </ul>
+                    <div style="margin-top: 20px; font-size: 13px; color: rgba(226,232,240,0.6)">
+                        Alternative: 7 zile / 5GB (17,90 ?) sau 30 zile / 25GB (38,90 ?)
+                    </div>
+                </aside>
+            </section>
+
+            <section class="section" id="beneficii">
+                <div class="section-header">
+                    <h2 class="section-title">De ce clien?ii aleg eSIM Europa</h2>
+                    <p class="section-subtitle">F?r? SIM fizic, f?r? timp pierdut. Activezi, porne?ti roaming-ul ?i e?ti conectat.</p>
+                </div>
+                <div class="grid three">
+                    <article class="card">
+                        <div class="card-icon">?</div>
+                        <h3>Activare instant</h3>
+                        <p>Prime?ti codul QR imediat dup? plat? ?i te conectezi ?n c?teva minute, ?nc? din aeroport.</p>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon">??</div>
+                        <h3>Acoperire european?</h3>
+                        <p>Func?ioneaz? ?n principalele ??ri turistice: Italia, Spania, Austria, Germania, Grecia ?i multe altele.</p>
+                    </article>
+                    <article class="card">
+                        <div class="card-icon">??</div>
+                        <h3>Suport dedicat</h3>
+                        <p>R?spundem rapid pe WhatsApp / e-mail ?i te ghid?m pas cu pas dac? ai nevoie de ajutor.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Cum porne?ti conexiunea ?n 3 pa?i simpli</h2>
+                    <p class="section-subtitle">?ntreaga procedur? dureaz? mai pu?in de 5 minute ?i nu necesit? vizit? ?ntr-un magazin fizic.</p>
+                </div>
+                <div class="grid two">
+                    <div class="steps">
+                        <div class="step">
+                            <span class="step-title">Plaseaz? comanda online</span>
+                            <p class="step-desc">Selecteaz? planul potrivit c?l?toriei tale ?i completeaz? datele de contact pentru livrare.</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-title">Scaneaz? codul QR</span>
+                            <p class="step-desc">Prime?ti imediat e-mail cu instruc?iuni ?i codul QR. Scanezi din set?rile telefonului, sec?iunea eSIM.</p>
+                        </div>
+                        <div class="step">
+                            <span class="step-title">Activeaz? ?nainte de plecare</span>
+                            <p class="step-desc">Porne?ti profilul eSIM exact ?nainte de aterizare ?i te bucuri de internet cu viteze 4G/5G.</p>
+                        </div>
+                    </div>
+                    <div class="card glow">
+                        <h3 style="margin-top:0">Sfaturi rapide</h3>
+                        <ul style="margin:18px 0 0; padding-left:20px; color: rgba(226,232,240,0.75); display:grid; gap:10px; font-size:14px;">
+                            <li>Verific? ?n prealabil dac? telefonul este deblocat ?i suport? eSIM.</li>
+                            <li>Folose?te eSIM-ul ca linie principal? de date la destina?ie ?i p?streaz? SIM-ul fizic pentru apeluri locale.</li>
+                            <li>Po?i realoca traficul ?ntre dispozitive folosind hotspot, f?r? costuri suplimentare.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="testimoniale">
+                <div class="section-header">
+                    <h2 class="section-title">Testimoniale reale de la c?l?tori</h2>
+                    <p class="section-subtitle">Peste 3.500 de clien?i mul?umi?i ?n sezonul 2024. Rating mediu: 4.9 / 5.</p>
+                </div>
+                <div class="reviews">
+                    <article class="review">
+                        <div class="review-header">
+                            <div class="review-avatar">AP</div>
+                            <div>
+                                <div class="review-name">Andreea P.</div>
+                                <div class="review-location">Londra ? City Break</div>
+                            </div>
+                        </div>
+                        <div class="stars">?????</div>
+                        <p class="review-text">?Am primit QR-ul ?n 30 de secunde dup? plat?. Conexiunea stabil? ?i vitez? foarte bun?. Recomand!?</p>
+                        <div style="font-size:12px; color: rgba(226,232,240,0.55)">verificat 18 septembrie 2024</div>
+                    </article>
+                    <article class="review">
+                        <div class="review-header">
+                            <div class="review-avatar">DM</div>
+                            <div>
+                                <div class="review-name">Dorin Matei</div>
+                                <div class="review-location">Italia ? 10 zile</div>
+                            </div>
+                        </div>
+                        <div class="stars">?????</div>
+                        <p class="review-text">?Am lucrat remote din Italia ?i a mers impecabil. Suportul mi-a r?spuns imediat c?nd am avut ?ntreb?ri.?</p>
+                        <div style="font-size:12px; color: rgba(226,232,240,0.55)">verificat 2 octombrie 2024</div>
+                    </article>
+                    <article class="review">
+                        <div class="review-header">
+                            <div class="review-avatar">RT</div>
+                            <div>
+                                <div class="review-name">Roxana T.</div>
+                                <div class="review-location">Barcelona ? Weekend</div>
+                            </div>
+                        </div>
+                        <div class="stars">?????</div>
+                        <p class="review-text">?F?r? stres cu cartele locale. Am partajat netul cu prietenii ?i totul a mers perfect.?</p>
+                        <div style="font-size:12px; color: rgba(226,232,240,0.55)">verificat 26 august 2024</div>
+                    </article>
+                    <article class="review">
+                        <div class="review-header">
+                            <div class="review-avatar">CD</div>
+                            <div>
+                                <div class="review-name">Cristian D.</div>
+                                <div class="review-location">Grecia ? Luna de miere</div>
+                            </div>
+                        </div>
+                        <div class="stars">?????</div>
+                        <p class="review-text">?Semnal bun inclusiv pe insule. Am fost anun?at cu o zi ?nainte s? ?mi re?ncarc traficul. Super organizat.?</p>
+                        <div style="font-size:12px; color: rgba(226,232,240,0.55)">verificat 9 iulie 2024</div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section" id="faq">
+                <div class="section-header">
+                    <h2 class="section-title">?ntreb?ri frecvente</h2>
+                    <p class="section-subtitle">Dac? ai alte nel?muriri, scrie-ne pe WhatsApp ?i te ajut?m imediat.</p>
+                </div>
+                <div class="faq">
+                    <details>
+                        <summary>Telefonul meu suport? eSIM?</summary>
+                        <p>Majoritatea modelelor iPhone, Samsung, Google Pixel ?i OnePlus lansate dup? 2020 sunt compatibile. G?se?ti lista complet? ?n ghidul nostru trimis dup? comand?.</p>
+                    </details>
+                    <details>
+                        <summary>C?t dureaz? livrarea codului QR?</summary>
+                        <p>Prime?ti automat e-mail ?i SMS cu codul QR ?n c?teva zeci de secunde dup? confirmarea pl??ii. ?n plus, ?l ai disponibil ?i ?n contul t?u.</p>
+                    </details>
+                    <details>
+                        <summary>Pot folosi hotspot c?tre alte dispozitive?</summary>
+                        <p>Da. Traficul inclus poate fi partajat c?tre laptop, tablet? sau prieteni, f?r? costuri ?n plus.</p>
+                    </details>
+                    <details>
+                        <summary>Ce fac dac? am nevoie de mai mult trafic?</summary>
+                        <p>Ne scrii pe WhatsApp, confirm?m ?n c?teva minute ?i ??i activ?m suplimente de date (5GB / 10GB) f?r? s? schimbi eSIM-ul.</p>
+                    </details>
+                </div>
+            </section>
+
+            <section class="cta-final">
+                <h2>Preg?tit s? c?l?tore?ti f?r? grija roaming-ului?</h2>
+                <p>Alege planul potrivit, instaleaz? eSIM-ul ?nainte de plecare ?i r?m?i conectat oriunde ?n Europa.</p>
+                <a class="btn-primary" href="#planuri" style="display:inline-flex; padding:16px 26px;">Comand? eSIM acum</a>
+            </section>
+        </main>
+
+        <footer>
+            ? 2025 eSIM Europa ? Internet rapid ?i stabil ?n toat? Uniunea European? ? <a href="#" style="color: rgba(236,253,245,0.8);">Contact</a>
+        </footer>
+    </div>
+</body>
+</html>
